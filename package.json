@@ -1,0 +1,38 @@
+{
+  "name": "chat-with-sockets",
+  "version": "1.0.0",
+  "description": "Chat developed with NodeJs, Express & React using socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/app",
+    "build": "webpack",
+    "build:dev": "webpack-dev-server --open --config ./webpack.dev.config.js",
+    "build:local": "webpack --env.NODE_ENV=local --env.production --progress",
+    "build:prod": "webpack -p --env.NODE_ENV=production --env.production --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamVelazquez/node-chat-with-sockets.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "socket.io",
+    "chat",
+    "react"
+  ],
+  "author": "William Velazquez <william.velazquez.a@gmail.com> (https://twitter.com/WilliamVlazquez)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilliamVelazquez/node-chat-with-sockets/issues"
+  },
+  "homepage": "https://github.com/WilliamVelazquez/node-chat-with-sockets#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "socket.io": "2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.19.1"
+  }
+}
