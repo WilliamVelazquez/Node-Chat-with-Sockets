@@ -1,26 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head> 
-    <title>Chat</title>
+<!--@Author William E. Velázquez Amarra - williamvelazquez.isc@gmail.com-->
+<!doctype html>
+  <html>
+   <head>
+    <title>Chat Application</title>
+    <link rel='stylesheet' href='style.css' type='text/css'/>
+    <!-- <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-1.11.1.js"></script> -->
+    
   </head>
-  <body>
-    <div class="container">
-      <br />
-      <div class="jumbotron">
-        <h1 class="display-4">Send Message</h1>
-        <br />
-        <input id="name" class="form-control" placeholder="Name" />
-        <br />
-        <textarea
-          id="message"
-          class="form-control"
-          placeholder="Your Message Here"
-        ></textarea>
-        <br />
-        <button id="send" class="btn btn-success">Send</button>
-      </div>
-      <div id="messages"></div>
-    </div>
-    <script></script>
+  <body> 
+    <ul id="messages"></ul>
+    <span id="notifyUser"></span>
+    <form id="form" action="" onsubmit="return submitfunction();" > 
+      <input type="hidden" id="user" value="" />
+      <input id="messageInput" autocomplete="off" onkeyup="notifyTyping();" placeholder="Type yor message here.." />
+      <input type="submit" id="button" value="Send"/> 
+    </form>
+    <script src="client.js"></script>
   </body>
 </html>
