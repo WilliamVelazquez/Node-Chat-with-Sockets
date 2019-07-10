@@ -4,13 +4,14 @@
    <head>
     <title>Chat Application</title>
     <link rel='stylesheet' href='style.css' type='text/css'/>
+    <link rel="shortcut icon" href="favicon.ico" />
   </head>
   <body> 
     <ul id="messages"></ul>
     <span id="notifyUser"></span>
-    <form id="form" action="" onsubmit="return submitfunction();" > 
+    <form id="form" action="" onsubmit="submitfunction(event)" > 
       <input type="hidden" id="user" value="" />
-      <input id="messageInput" autocomplete="off" onkeyup="notifyTyping();" placeholder="Type yor message here.." />
+      <input id="messageInput" autocomplete="off" onkeyup="notifyTyping(event)" placeholder="Type yor message here.." />
       <input type="submit" id="button" value="Send"/> 
     </form>
     <script src="/socket.io/socket.io.js"></script>
