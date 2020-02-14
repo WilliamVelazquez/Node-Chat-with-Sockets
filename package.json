@@ -2,13 +2,9 @@
   "name": "chat-with-sockets",
   "version": "1.0.0",
   "description": "Chat developed with NodeJs, Express & React using socket.io",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "nodemon server/index",
-    "build": "webpack",
-    "build:dev": "webpack-dev-server --open --config ./webpack.dev.config.js",
-    "build:local": "webpack --env.NODE_ENV=local --env.production --progress",
-    "build:prod": "webpack -p --env.NODE_ENV=production --env.production --progress"
+    "start": "nodemon server/index"
   },
   "repository": {
     "type": "git",
@@ -18,7 +14,8 @@
     "NodeJs",
     "socket.io",
     "chat",
-    "react"
+    "react",
+    "WilliamVelazquez"
   ],
   "author": "William Velazquez <william.velazquez.a@gmail.com> (https://twitter.com/WilliamVlazquez)",
   "license": "ISC",
